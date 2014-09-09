@@ -1,0 +1,15 @@
+<PropertyList>
+
+
+    <!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+    -->
+    <!--                   Auteur :      Gerard ROBIN                      GPL COPYRIGHT-->
+	<path>h21c-fuselage-doublage.ac</path>
+
+	<texture-path>Textures</texture-path>
+
+
+</PropertyList>
