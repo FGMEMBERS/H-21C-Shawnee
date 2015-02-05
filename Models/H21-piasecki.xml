@@ -1,0 +1,146 @@
+<PropertyList include="H21_base-v1.xml">
+
+
+    <!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+    -->
+    <!--                   Auteur :      Gerard ROBIN                      GPL COPYRIGHT-->
+	<path>h21c-base-v1.ac</path>
+
+	<texture-path>Textures</texture-path>
+
+
+        <offsets>
+            <pitch-deg>0</pitch-deg>
+            <z-m>0.05</z-m>
+            <x-m>0.0</x-m>
+        </offsets>
+
+        <animation>
+		<type>noshadow</type>
+                <object-name>Fuselage-Doublage</object-name>
+                <object-name>Cockpit</object-name>
+ 	</animation>
+
+
+        <model>
+            <name>Fuselage-Doublage</name>
+            <path>Aircraft/H-21C-Shawnee/Models/H21-Fuselage-Doublage.xml</path>
+            <offsets>
+                    <x-m>0</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>Cockpit</name>
+            <path>Aircraft/H-21C-Shawnee/Models/H21-Cockpit.xml</path>
+            <offsets>
+                    <x-m>0</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>AVRotor-Tete</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Tete.xml</path>
+            <offsets>
+                    <x-m>-6.36307</x-m>
+                    <y-m>0</y-m>
+                    <z-m>1.90207</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>AVRotor-Pale0</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale0.xml</path>
+            <offsets>
+                    <x-m>-6.36307</x-m>
+                    <y-m>0</y-m>
+                    <z-m>1.90207</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>AVRotor-Pale1</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale1.xml</path>
+            <offsets>
+                    <x-m>-6.36307</x-m>
+                    <y-m>0</y-m>
+                    <z-m>1.90207</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>AVRotor-Pale2</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale2.xml</path>
+            <offsets>
+                    <x-m>-6.36307</x-m>
+                    <y-m>0</y-m>
+                    <z-m>1.90207</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>ARRotor-Tete</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Tete.xml</path>
+            <offsets>
+                    <x-m>6.0047</x-m>
+                    <y-m>0</y-m>
+                    <z-m>2.1567</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>ARRotor-Pale0</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale0.xml</path>
+            <offsets>
+                    <x-m>6.0047</x-m>
+                    <y-m>0</y-m>
+                    <z-m>2.1567</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>ARRotor-Pale1</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale1.xml</path>
+            <offsets>
+                    <x-m>6.0047</x-m>
+                    <y-m>0</y-m>
+                    <z-m>2.1567</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <model>
+            <name>ARRotor-Pale2</name>
+            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale2.xml</path>
+            <offsets>
+                    <x-m>6.0047</x-m>
+                    <y-m>0</y-m>
+                    <z-m>2.1567</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+
+
+
+
+
+
+
+
+</PropertyList>

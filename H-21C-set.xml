@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Gerard Robin
+    Copyright License:  GPL
+-->
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+	<description>Piasecki_H-21C_Helicopter</description>
+        <author>Gerard Robin</author>
+        <status>alpha, "GPL Copyright"</status>
+        <version> 0.2</version>
+	<flight-model>yasim</flight-model>
+	<aero>h21-new</aero>
+        <startup>
+            <splash-texture>Aircraft/H-21C-Shawnee/splash.rgb</splash-texture>
+        </startup>
+	<fuel-fraction>0.8</fuel-fraction>
+	<sound>
+		<path>Aircraft/H-21C-Shawnee/Sounds/bell206-sound.xml</path>
+	</sound>
+
+
+
+  <hud>
+  <enable3d>false</enable3d>
+   <visibility archive="n">false</visibility>
+  </hud>
+
+  <model>
+   <path archive="y">Aircraft/H-21C-Shawnee/Models/H21-piasecki.xml</path>
+                    <h21>
+                            <nav-lights type="bool">true</nav-lights>
+                            <state type="int">0</state>
+                            <rotor-step-deg type="float">0.0</rotor-step-deg>
+                    </h21>
+  </model>
+
+  <view>
+        <internal archive="y">true</internal>
+           <config>
+                     <x-offset-m archive="y">0.39</x-offset-m><!--right-->
+                     <y-offset-m archive="y">0.66</y-offset-m><!--up-->
+                     <z-offset-m archive="y">-6.70</z-offset-m><!--back-->
+                     <pitch-offset-deg>-12</pitch-offset-deg>
+                     <default-field-of-view-deg type="double">73.0</default-field-of-view-deg>
+           </config>
+  </view>
+    <weight n="0">
+            <name>Pilots</name>
+            <weight-lb>300</weight-lb>
+            <max-lb>400</max-lb>
+    </weight>
+    <weight n="1">
+            <name>Troop</name>
+            <weight-lb>800</weight-lb>
+            <max-lb>1000</max-lb>
+    </weight>
+    <weight n="2">
+            <name>Troop</name>
+            <weight-lb>800</weight-lb>
+            <max-lb>1000</max-lb>
+    </weight>
+    <weight n="3">
+            <name>Troop</name>
+            <weight-lb>800</weight-lb>
+            <max-lb>1000</max-lb>
+    </weight>
+    <weight n="4">
+            <name>Troop</name>
+            <weight-lb>800</weight-lb>
+            <max-lb>1000</max-lb>
+    </weight>
+
+    <help include="Help/H21-help.xml"/>
+
+ </sim>
+
+
+ <controls>
+	<flight>
+                <aileron-trim>-0.00000</aileron-trim>
+                <rudder-trim>-0.0000</rudder-trim>
+	</flight>
+	<engines>
+                <engine n="0">
+                        <magnetos>0</magnetos>
+                        <rotorgear>0</rotorgear>
+                        <master-bat>false</master-bat>
+                        <throttle>1</throttle>
+                </engine>
+                <engine n="1">
+                        <throttle>1</throttle>
+                </engine>
+	</engines>
+        <gear>
+                <brake-parking type="double">1.0</brake-parking>
+        </gear>
+        <rotor>
+            <brake>1</brake>
+        </rotor>
+        <electric>
+            <master-switch>false</master-switch>
+            <battery-switch>false</battery-switch>
+        </electric>
+        <switches>
+            <landing-light>true</landing-light>
+            <master-avionics>false</master-avionics>
+        </switches>
+        <lighting>
+            <instruments-norm type="double">0.4</instruments-norm>
+        </lighting>
+ </controls>
+
+
+	<input include="Inputs/H21-input.xml"/>
+
+
+
+	<nasal>
+                <electrical>
+                        <file>Aircraft/H-21C-Shawnee/System/electrical.nas</file>
+                </electrical>
+		<h21>
+			<file>Aircraft/H-21C-Shawnee/System/h21.nas</file>
+		</h21>
+	</nasal>
+
+
+</PropertyList>
