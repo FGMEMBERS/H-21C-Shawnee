@@ -1,0 +1,155 @@
+<PropertyList>
+	<path>h21c-fuselage-doublage.ac</path>
+	
+	<!-- No preview for fgrun-->
+	<animation>
+		<object-name>LightVolumeCabin1</object-name>
+		<nopreview/>
+	</animation>
+	
+  <animation>
+    <type>material</type>
+    <object-name>Fuselage-Doublage</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>cylinder.001</object-name>
+    <object-name>cylinder.002</object-name>
+    <object-name>cylinder.003</object-name>
+    <object-name>cylinder.004</object-name>
+    <object-name>cylinder.005</object-name>
+    <object-name>rect</object-name>
+    <object-name>rect.001</object-name>
+    <object-name>disk</object-name>
+    <object-name>disk.001</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>Marine</value>
+      </equals>
+    </condition>
+    <texture>btextu99.rgb</texture>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Fuselage-Doublage</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>cylinder.001</object-name>
+    <object-name>cylinder.002</object-name>
+    <object-name>cylinder.003</object-name>
+    <object-name>cylinder.004</object-name>
+    <object-name>cylinder.005</object-name>
+    <object-name>rect</object-name>
+    <object-name>rect.001</object-name>
+    <object-name>disk</object-name>
+    <object-name>disk.001</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>sim/model/livery/file</property>
+          <value>13DBLE</value>
+        </equals>
+        <equals>
+          <property>sim/model/livery/file</property>
+          <value>SAR</value>
+        </equals>
+      </or>
+    </condition>
+    <texture>miltextu99.rgb</texture>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Fuselage-Doublage</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+    <emission>
+      <red>1.25</red>
+      <green>0.6</green>
+      <blue>0.3</blue>
+      <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>cylinder</object-name>
+    <object-name>cylinder.001</object-name>
+    <object-name>cylinder.002</object-name>
+    <object-name>cylinder.003</object-name>
+    <object-name>cylinder.004</object-name>
+    <object-name>cylinder.005</object-name>
+    <object-name>rect</object-name>
+    <object-name>rect.001</object-name>
+    <object-name>disk</object-name>
+    <object-name>disk.001</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+    <emission>
+      <red>0.62</red>
+      <green>0.3</green>
+      <blue>0.15</blue>
+      <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+    </emission>
+  </animation>
+  
+ 	<!-- inner light -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>CabinLight</name>
+		<object-name>LightVolumeCabin1</object-name>
+		<position>
+			<x>-2.68</x>
+			<y> 0.0</y>
+			<z>0.77</z>
+		</position>
+		<direction>
+			<x>-0.3</x>
+			<y> 0.0</y>
+			<z>-0.7</z>
+		</direction>
+    <dim-factor>
+      <property>sim/multiplay/generic/float[11]</property>
+      <factor>1</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+    </dim-factor>
+		<direction>
+			<x>-0.3</x>
+			<y> 0.0</y>
+			<z>-0.7</z>
+		</direction>
+		<ambient>
+			<r>0.80</r>
+			<g>0.20</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.7</l>
+			<q>8</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>250</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <path>lamp.ac</path>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>bezel</object-name>
+    <object-name>shadow</object-name>
+	</effect>
+
+  <animation>
+    <type>material</type>
+      <object-name>lampOn</object-name>
+    <emission>
+      <red>1</red>
+      <green>0</green>
+      <blue>0</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+
+  <animation>
+      <type>material</type>
+        <object-name>bezel</object-name>
+        <object-name>shadow</object-name>
+        <object-name>lampOff</object-name>
+      <condition>
+        <greater-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0</value>
+        </greater-than>
+      </condition>
+      <emission>
+        <red>1.25</red>
+        <green>0.6</green>
+        <blue>0.3</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+  </animation>
+
+  <animation>
+      <type>material</type>
+        <object-name>bezel</object-name>
+        <object-name>shadow</object-name>
+        <object-name>lampOff</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1</value>
+        </less-than>
+      </condition>
+      <emission>
+        <red>0.01</red>
+        <green>0.01</green>
+        <blue>0.01</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      </emission>
+  </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>shadow</object-name>
+      <texture>label_rotor_brake.png</texture>
+    </animation>
+
+    <!-- Main Control -->
+    <animation>
+        <type>select</type>
+        <object-name>lampOff</object-name>
+        <condition>
+          <or>
+          <less-than>
+            <property>/controls/rotor/brake</property>
+            <value>1</value>
+          </less-than>
+            <equals>
+              <property>/controls/electric/master-switch</property>
+              <value>0</value>
+            </equals>
+          </or>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>lampOn</object-name>
+        <condition>
+          <greater-than>
+            <property>/controls/rotor/brake</property>
+            <value>0</value>
+          </greater-than>
+          <equals>
+            <property>/controls/electric/master-switch</property>
+            <value>1</value>
+          </equals>
+        </condition>
+    </animation>
+
+</PropertyList>

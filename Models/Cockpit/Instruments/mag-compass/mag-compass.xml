@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>mag-compass.ac</path>
+
+  <animation>
+      <type>material</type>
+      <object-name>Compass.Ball</object-name>
+      <object-name>Compass.Index</object-name> 
+      <condition>
+        <and>
+          <not>
+            <property>/controls/electric/master-switch</property>
+          </not>
+          <greater-than>
+            <property>sim/multiplay/generic/float[11]</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+      </condition>
+      <emission>
+        <red>0.32</red>
+        <green>0.15</green>
+        <blue>0.075</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+  </animation>
+
+  <animation>
+      <type>material</type>
+      <object-name>Compass.Ball</object-name>
+      <object-name>Compass.Index</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1.01</value>
+        </less-than>
+      </condition>
+      <emission>
+	      <red>0.028</red>
+	      <green>0.014</green>
+	      <blue>0.007</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      </emission>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Compass.Ball</object-name>
+  <property>/orientation/heading-magnetic-deg</property>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+  <center>
+    <x-m>-0.023</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </center>
+</animation>
+
+</PropertyList>

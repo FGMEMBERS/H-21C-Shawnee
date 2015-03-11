@@ -1,6 +1,5 @@
 <PropertyList>
 
-
     <!--
     Usable with FlightGear
     Property of Gerard Robin
@@ -23,12 +22,12 @@
         </model>
 
 
-        <!--ROTATE===============-->
+        <!--ROTATE===============
 
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-Pale</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -45,7 +44,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-PaleD</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -63,7 +62,7 @@
 		<type>rotate</type>
                 <object-name>Rotor-Pale-Base</object-name>
                 <object-name>Rotor-Pale-Fix</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -80,7 +79,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-Pale-Rot</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -97,7 +96,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-Disc_M-Pale</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -110,14 +109,14 @@
 			<z>1</z>
 		</axis>
 	</animation>
-
+	-->
 
         <!--FLAP=================-->
 
         <animation>
 		<type>rotate</type>
 		<object-name>Rotor-Pale</object-name>
-                <property>rotors/main2/blade[0]/flap-deg</property>
+                <property>rotors/tail/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
                         <x-m>0.148275</x-m>
@@ -134,7 +133,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-PaleD</object-name>
-                <property>rotors/main2/blade[0]/flap-deg</property>
+                <property>rotors/tail/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
                         <x-m>0.148275</x-m>
@@ -152,7 +151,7 @@
 		<type>rotate</type>
                 <object-name>Rotor-Pale-Base</object-name>
                 <object-name>Rotor-Pale-Fix</object-name>
-                <property>rotors/main2/blade[0]/flap-deg</property>
+                <property>rotors/tail/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
                         <x-m>0.148275</x-m>
@@ -169,7 +168,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-Pale-Rot</object-name>
-                <property>rotors/main2/blade[0]/flap-deg</property>
+                <property>rotors/tail/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
                         <x-m>0.148275</x-m>
@@ -186,7 +185,7 @@
         <animation>
 		<type>rotate</type>
                 <object-name>Rotor-Disc_M-Pale</object-name>
-                <property>rotors/main2/blade[0]/flap-deg</property>
+                <property>rotors/tail/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
                         <x-m>0.148275</x-m>
@@ -199,13 +198,5 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-
-
-
-
-
-
-
 
 </PropertyList>

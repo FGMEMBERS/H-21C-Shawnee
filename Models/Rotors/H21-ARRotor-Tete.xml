@@ -1,6 +1,5 @@
 <PropertyList>
 
-
     <!--
     Usable with FlightGear
     Property of Gerard Robin
@@ -8,28 +7,71 @@
     -->
     <!--                   Auteur :      Gerard ROBIN            GPL  COPYRIGHT-->
 	<path>Models/h21-arrotor-tete.ac</path>
-
+	
 	<texture-path>Textures</texture-path>
-        <offsets>
-            <heading-deg>180</heading-deg>
-        </offsets>
+	<offsets>
+		<heading-deg>180</heading-deg>
+	</offsets>
 
-        <animation>
-                <condition>
-                    <equals>
-                        <property>sim/current-view/view-number</property>
-                        <value>999</value>
-                    </equals>
-            </condition>
+	<animation>
+			<condition>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>999</value>
+				</equals>
+			</condition>
 		<type>select</type>
-                <object-name>Gabarit-Pose</object-name>
- 	</animation>
+		<object-name>Gabarit-Pose</object-name>
+	</animation>
+	
+	<model>
+		<name>ARRotor-Pale0</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale0.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>180</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
+	<model>
+		<name>ARRotor-Pale1</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale1.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>300</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-        <animation>
+	<model>
+		<name>ARRotor-Pale2</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-ARRotor-Pale2.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>60</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+	<name>rotorset</name>
+		<object-name>Rotor-Tete</object-name>
+		<object-name>ARRotor-Pale0</object-name>
+		<object-name>ARRotor-Pale1</object-name>
+		<object-name>ARRotor-Pale2</object-name>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-Tete</object-name>
-                <property>rotors/main2/blade[0]/position-deg</property>
+                <object-name>rotorset</object-name>
+                <property>rotors/tail/blade[0]/position-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -42,7 +84,5 @@
 			<z>1</z>
 		</axis>
 	</animation>
-
-
 
 </PropertyList>

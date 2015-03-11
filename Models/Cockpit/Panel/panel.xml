@@ -1,0 +1,345 @@
+<PropertyList>
+
+	<path>panel.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Panel</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>Marine</value>
+      </equals>
+    </condition>
+    <texture>panel.png</texture>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Panel</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>13DBLE</value>
+      </equals>
+    </condition>
+    <texture>milpanel.png</texture>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Panel</object-name>
+    <condition>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+    </condition>    
+    <emission>
+      <red>1.25</red>
+      <green>0.6</green>
+      <blue>0.3</blue>
+      <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+    </emission>
+  </animation>
+
+<!-- Magnetic-Compass -->
+  <model>
+    <name>Magnetic Compass</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/mag-compass/mag-compass.xml</path>
+      <offsets>
+      <x-m>-0.130</x-m>
+      <y-m>-0.017</y-m>
+      <z-m>0.340</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Radio-Magnetic-Indicator -->
+  <model>
+    <name>RMI</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/rmi/rmi.xml</path>
+      <offsets>
+      <x-m>-0.200</x-m>
+      <y-m>0.053</y-m>
+      <z-m>0.225</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+
+<!-- ########################################## RIGHT SIDE ################################ -->
+
+<!-- Airspeed Indicator -->
+  <model>
+    <name>ASI 150</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/asi/asi-150.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.015</y-m>
+      <z-m> 0.105</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Engines RPM -->
+  <model>
+    <name>RPM</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/rpm/rpm.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.015</y-m>
+      <z-m> 0.010</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- AGL-Ground-Radar -->
+  <model>
+    <name>AGL GROUND RADAR</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/agl-radar/agl-radar.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.015</y-m>
+      <z-m>-0.085</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+
+<!-- AI -->
+  <model>
+    <name>AI</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/ai/ai.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.100</y-m>
+      <z-m> 0.080</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+
+<!-- Magnetic compass -->
+  <model>
+    <name>Compass</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/hi/hi.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.235</y-m>
+      <z-m> 0.080</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Altimeter -->
+  <model>
+    <name>ALTIMETER</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/alt/alt.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.075</y-m>
+      <z-m>-0.040</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Course Indicator TACAN -->
+  <model>
+    <name>CI</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/ci/ci.xml</path>
+      <offsets>
+      <x-m> 0.00</x-m>
+      <y-m> 0.1675</y-m>
+      <z-m>-0.040</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Turn and Bank -->
+  <model>
+    <name>TURN AND BANK</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/turn/turn.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.260</y-m>
+      <z-m>-0.040</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- DME -->
+  <model>
+    <name>DME</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/dme/dme.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.260</y-m>
+      <z-m>-0.135</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Vertical Speed Indicator -->
+  <model>
+    <name>VSI</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/vsi/vsi.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.1675</y-m>
+      <z-m>-0.135</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Nav deviation Instrument -->
+  <model>
+    <name>NAV1</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/nav/nav-dev.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.075</y-m>
+      <z-m>-0.135</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- ####################################### AP BOX ################################### -->
+
+<!-- Nav deviation Instrument -->
+  <model>
+    <name>AP Box Panel</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/ap/ap.xml</path>
+      <offsets>
+      <x-m> 0.038</x-m>
+      <y-m> 0.157</y-m>
+      <z-m>-0.230</z-m>
+      <pitch-deg>-8</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- ####################################### LEFT SIDE ################################ -->
+<!-- Control lamps -->
+  <model>
+    <name>Lamp Fuel Warning</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-fuel-warning.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.110</y-m>
+      <z-m> 0.140</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Lamp Brake</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-brake.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.175</y-m>
+      <z-m> 0.140</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Lamp Rotor Brake</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-n-brake.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.235</y-m>
+      <z-m> 0.140</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Lamp Front Door</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-right-door.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.235</y-m>
+      <z-m> 0.080</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Lamp Rear Door</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-left-door.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.235</y-m>
+      <z-m> 0.020</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Lamp Hook</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-hook.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.235</y-m>
+      <z-m>-0.040</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Fuel control Instrument -->
+  <model>
+    <name>Tank1</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/fuel/tank1.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.110</y-m>
+      <z-m> 0.080</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Tank2</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/fuel/tank2.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.110</y-m>
+      <z-m> 0.015</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>AMP</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/electric/amp.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.110</y-m>
+      <z-m>-0.050</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <name>Volt</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/electric/volt.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.110</y-m>
+      <z-m>-0.115</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+<!-- Flight-Rallye-Watch -->
+  <model>
+    <name>FRW</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/frw/frw.xml</path>
+      <offsets>
+      <x-m> 0</x-m>
+      <y-m>-0.175</y-m>
+      <z-m> 0.080</z-m>
+      <pitch-deg>0</pitch-deg>
+      </offsets>
+  </model>
+
+
+</PropertyList>

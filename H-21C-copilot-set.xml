@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Original from Gerard Robin
+    Updated by Marc Kraus, Avril 2012 and Oliver Thurau 16.09.2012
+-->
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList>
+
+<sim>
+	<description>Piasecki H-21C Copilot</description>
+	<author>Lake of Constance Hangar Tuning</author>
+	<status>alpha</status>
+	<version>0.3.5</version>
+	<flight-model>null</flight-model>
+	
+	<startup>
+		<splash-texture>Aircraft/H-21C-Shawnee/splash.png</splash-texture>
+	</startup>
+	
+	<sound>
+		<path>Aircraft/H-21C-Shawnee/Sounds/H-21C-sound.xml</path>
+	</sound>
+
+	<model>
+		<path archive="y">Aircraft/H-21C-Shawnee/Models/H21-copilot.xml</path>
+	</model>
+	
+	<remote>
+		<pilot-callsign type="string"/>
+	</remote>
+	
+	<multiplay n="0">
+		<chat_display>1</chat_display>
+		<generic n="0"> 
+		<!-- helper for Copilot function -->
+		</generic>
+	</multiplay>
+	
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+	
+	<view n="0">      
+		<name>Copilot</name>
+		<internal archive="y">true</internal>
+		<enabled type="bool">true</enabled>
+		<config>
+			<x-offset-m archive="y">-0.50</x-offset-m><!--right-->
+			<y-offset-m archive="y">0.65</y-offset-m><!--up-->
+			<z-offset-m archive="y">-6.70</z-offset-m><!--back-->
+			<pitch-offset-deg type="double">-9</pitch-offset-deg>
+			<default-field-of-view-deg type="double">73.0</default-field-of-view-deg>
+		</config>
+	</view>
+	
+	<view n="1">
+		<enabled type="bool">true</enabled>
+	</view>
+
+	<view n="2">
+		<enabled type="bool">true</enabled>
+	</view>
+
+	<view n="6">
+		<enabled type="bool">true</enabled>
+	</view>
+
+	<view n="100">
+		<name>Walkview</name>
+		<internal>true</internal>
+		<enabled type="bool">true</enabled>
+		<type>lookfrom</type>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">true</from-model-idx>
+			<x-offset-m archive="y">0</x-offset-m><!--right-->
+			<y-offset-m archive="y">0.65</y-offset-m><!--up-->
+			<z-offset-m archive="y">-6.80</z-offset-m><!--back-->
+			<pitch-offset-deg type="double"> -9 </pitch-offset-deg>
+			<default-field-of-view-deg type="double"> 73.0 </default-field-of-view-deg>
+		</config>
+	</view>
+
+	<help>
+		<title>H-21C</title>
+		<key>
+			<name>w|a|s|d</name>
+			<desc>Walkview</desc>
+		</key>
+	</help>
+	
+	<menubar>
+		<default>
+		<menu n="10">
+			<label>H-21C</label>
+			<enabled type="bool">true</enabled>
+			<item>
+				<label>Select MP-Pilot</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+					dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
+					</script>
+				</binding>
+			</item>
+		</menu>
+		</default>
+	</menubar>
+	</sim>
+	
+	<instrumentation>
+		<!-- Flightgear Rallye Watch  -->
+		<frw>
+			<running type="bool">0</running>
+			<btn-mode type="bool">0</btn-mode>
+			<btn-reset type="bool">0</btn-reset>
+			<btn-start-stop type="bool">0</btn-start-stop>
+			<flight-time>
+				<start-time type="double">0</start-time>
+				<accu type="double">0</accu>
+				<total type="double">0</total>
+				<hours type="int">0</hours>
+				<minutes type="int">0</minutes>
+				<seconds type="int">0</seconds>
+			</flight-time>
+		</frw>
+		<radio-select>
+			<switch type="int">1</switch>
+		</radio-select>    
+		<tacan>
+			<display>
+				<correction>0</correction>
+			</display>
+		</tacan>
+		<radar>
+		<name>radar</name>
+		<number>0</number>
+			<update-interval-sec>0</update-interval-sec>
+			<serviceable type="bool">true</serviceable>
+			<switch type="string" archive="y">on</switch>
+			<range type="double" archive="y">40</range>
+			<mode-control type="int" archive="y">2</mode-control>
+			<limit-deg type="double">180</limit-deg>
+			<mode type="string" archive="y">WX</mode>
+			<lightning type="bool" archive="y">true</lightning>
+			<display-mode type="string" archive="y">plan</display-mode>
+			
+			<display-controls>
+				<WX type="bool" archive="y">false</WX>
+				<data type="bool" archive="y">true</data>
+				<pos type="bool" archive="y">true</pos>
+			</display-controls>
+		</radar>
+	</instrumentation>
+
+	<controls>
+		<flight>
+			<aileron-trim>-0.0</aileron-trim>
+			<rudder-trim>-0.0</rudder-trim>
+			<elevator-h21>0.0</elevator-h21>
+		</flight>
+		<engines>
+			<engine n="0">
+				<magnetos>0</magnetos>
+				<rotorgear>0</rotorgear>
+				<master-bat>false</master-bat>
+				<throttle>1</throttle>
+			</engine>
+			<engine n="1">
+				<throttle>1</throttle>
+			</engine>
+		</engines>
+		<gear>
+			<brake-parking type="bool">0</brake-parking>
+		</gear>
+		<rotor>
+			<brake>1</brake>
+		</rotor>
+		<electric>
+			<master-switch>false</master-switch>
+			<battery-switch>false</battery-switch>
+		</electric>
+		<switches>
+			<start type="bool">0</start>
+			<master-avionics>false</master-avionics>
+			<master-cover>false</master-cover>
+		</switches>
+	</controls>
+	
+	<rotors>
+		<main>
+			<torque>0</torque>
+		</main>
+		<tail>
+			<torque>0</torque>
+		</tail>
+	</rotors>
+	
+	<!-- only for Copilot Multiplay -->
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<mk-level-gal_us type="double">120</mk-level-gal_us>
+			</tank>
+			<tank n="1">
+				<mk-level-gal_us type="double">120</mk-level-gal_us>
+			</tank>
+		</fuel>
+	</consumables>
+	
+	<autopilot>
+		<settings>
+			<target-altitude-ft type="int">0</target-altitude-ft>
+			<heading-bug-deg type="int">0</heading-bug-deg>
+		</settings>
+		<switches>
+			<ap type="bool">0</ap>
+			<hdg type="bool">0</hdg>
+			<alt type="bool">0</alt>
+			<nav type="bool">0</nav>
+			<dme type="bool">0</dme>
+		</switches>
+	</autopilot>
+	
+	<input include="Systems/H21-keyboard-copilot.xml"/>
+	
+<!-- Landing Gear settings -->
+	<gear>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg type="double">0</caster-angle-deg>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+	</gear>
+	
+<!-- NASAL -->
+	<nasal>
+		<electrical>
+			<file>Aircraft/H-21C-Shawnee/Nasal/electrical-and-fuel.nas</file>
+		</electrical>
+		<h21>
+			<file>Aircraft/H-21C-Shawnee/Nasal/h21.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/liveries.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/flight-control.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/h21-hook.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/mk-ci-tacan.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/mk-ap-helper.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/doors.nas</file>
+		</h21>
+		<tyresmoke>
+			<file>Aircraft/H-21C-Shawnee/Nasal/tyresmoke.nas</file>
+		</tyresmoke>
+		<frw>
+			<file>Aircraft/H-21C-Shawnee/Nasal/mk-frw.nas</file>
+		</frw>
+		<dual_control_tools>
+			<file>Aircraft/H-21C-Shawnee/Nasal/Gidenstam/dual-control-tools.nas</file>
+		</dual_control_tools>
+		<aircraft_dual_control>
+			<file>Aircraft/H-21C-Shawnee/Nasal/h21-dual-control.nas</file>
+		</aircraft_dual_control>
+		<dual_control>
+			<file>Aircraft/H-21C-Shawnee/Nasal/Gidenstam/copilot-dual-control.nas</file>
+		</dual_control>
+		<!-- Walk View -->
+		<walkview>
+			<file>Aircraft/H-21C-Shawnee/Nasal/Gidenstam/walkview.nas</file>
+		</walkview>
+		<WalkViews>
+			<file>Aircraft/H-21C-Shawnee/Nasal/h21-walkview.nas</file>
+		</WalkViews>
+	</nasal>
+
+</PropertyList>

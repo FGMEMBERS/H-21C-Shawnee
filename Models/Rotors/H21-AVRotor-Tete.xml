@@ -1,34 +1,78 @@
 <PropertyList>
 
 
-    <!--
-    Usable with FlightGear
-    Property of Gerard Robin
-    Copyright License:  GPL
-    -->
-    <!--                   Auteur :      Gerard ROBIN            GPL  COPYRIGHT-->
+	<!--
+	Usable with FlightGear
+	Property of Gerard Robin
+	Copyright License:  GPL
+	-->
+	<!--                   Auteur :      Gerard ROBIN            GPL  COPYRIGHT-->
 	<path>Models/h21-avrotor-tete.ac</path>
-
+	
 	<texture-path>Textures</texture-path>
-        <offsets>
-            <heading-deg>180</heading-deg>
-        </offsets>
+	
+	<offsets>
+		<heading-deg>180</heading-deg>
+	</offsets>
 
-        <animation>
-                <condition>
-                    <equals>
-                        <property>sim/current-view/view-number</property>
-                        <value>999</value>
-                    </equals>
-            </condition>
+	<animation>
+			<condition>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>999</value>
+				</equals>
+			</condition>
 		<type>select</type>
-                <object-name>Gabarit-Pose</object-name>
- 	</animation>
+		<object-name>Gabarit-Pose</object-name>
+	</animation>
+	
+	<model>
+		<name>AVRotor-Pale0</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale0.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>180</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
+	<model>
+		<name>AVRotor-Pale1</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale1.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>300</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-        <animation>
+	<model>
+		<name>AVRotor-Pale2</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Pale2.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<heading-deg>60</heading-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+	<name>rotorset</name>
+		<object-name>Rotor-Tete</object-name>
+		<object-name>AVRotor-Pale0</object-name>
+		<object-name>AVRotor-Pale1</object-name>
+		<object-name>AVRotor-Pale2</object-name>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-Tete</object-name>
+                <object-name>rotorset</object-name>
                 <property>rotors/main/blade[0]/position-deg</property>
 		<factor>1</factor>
 		<center>
@@ -42,7 +86,5 @@
 			<z>1</z>
 		</axis>
 	</animation>
-
-
-
+	
 </PropertyList>

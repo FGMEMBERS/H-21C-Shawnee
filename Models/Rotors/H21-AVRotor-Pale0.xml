@@ -1,25 +1,25 @@
 <PropertyList>
 
 
-    <!--
-    Usable with FlightGear
-    Property of Gerard Robin
-    Copyright License:  GPL
-    -->
-    <!--                   Auteur :      Gerard ROBIN            GPL  COPYRIGHT-->
+	<!--
+	Usable with FlightGear
+	Property of Gerard Robin
+	Copyright License:  GPL
+	-->
+	<!--                   Auteur :      Gerard ROBIN            GPL  COPYRIGHT-->
+	
+	<model>
+		<name>AVRotor</name>
+		<path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Base.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-        <model>
-            <name>AVRotor</name>
-            <path>Aircraft/H-21C-Shawnee/Models/Rotors/H21-AVRotor-Base.xml</path>
-            <offsets>
-                    <x-m>0</x-m>
-                    <y-m>0</y-m>
-                    <z-m>0</z-m>
-                    <pitch-deg>0</pitch-deg>
-            </offsets>
-        </model>
-
-        <!--ROTATE===============-->
+        <!--ROTATE===============
 
         <animation>
 		<type>rotate</type>
@@ -106,17 +106,17 @@
 			<z>1</z>
 		</axis>
 	</animation>
+	-->
 
-
-        <!--FLAP=================-->
-
-        <animation>
+	<!--FLAP=================-->
+	
+	<animation>
 		<type>rotate</type>
 		<object-name>Rotor-Pale</object-name>
-                <property>rotors/main/blade[0]/flap-deg</property>
+		<property>rotors/main/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
-                        <x-m>0.148275</x-m>
+			<x-m>0.148275</x-m>
 			<y-m>0</y-m>
 			<z-m>0.16689</z-m>
 		</center>
@@ -126,14 +126,14 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-        <animation>
+	
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-PaleD</object-name>
-                <property>rotors/main/blade[0]/flap-deg</property>
+		<object-name>Rotor-PaleD</object-name>
+		<property>rotors/main/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
-                        <x-m>0.148275</x-m>
+			<x-m>0.148275</x-m>
 			<y-m>0</y-m>
 			<z-m>0.16689</z-m>
 		</center>
@@ -143,15 +143,15 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-        <animation>
+	
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-Pale-Base</object-name>
-                <object-name>Rotor-Pale-Fix</object-name>
-                <property>rotors/main/blade[0]/flap-deg</property>
+		<object-name>Rotor-Pale-Base</object-name>
+		<object-name>Rotor-Pale-Fix</object-name>
+		<property>rotors/main/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
-                        <x-m>0.148275</x-m>
+			<x-m>0.148275</x-m>
 			<y-m>0</y-m>
 			<z-m>0.16689</z-m>
 		</center>
@@ -161,14 +161,14 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-        <animation>
+	
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-Pale-Rot</object-name>
-                <property>rotors/main/blade[0]/flap-deg</property>
+		<object-name>Rotor-Pale-Rot</object-name>
+		<property>rotors/main/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
-                        <x-m>0.148275</x-m>
+			<x-m>0.148275</x-m>
 			<y-m>0</y-m>
 			<z-m>0.16689</z-m>
 		</center>
@@ -179,13 +179,13 @@
 		</axis>
 	</animation>
 
-        <animation>
+	<animation>
 		<type>rotate</type>
-                <object-name>Rotor-Disc_M-Pale</object-name>
-                <property>rotors/main/blade[0]/flap-deg</property>
+		<object-name>Rotor-Disc_M-Pale</object-name>
+		<property>rotors/main/blade[0]/flap-deg</property>
 		<factor>1</factor>
 		<center>
-                        <x-m>0.148275</x-m>
+			<x-m>0.148275</x-m>
 			<y-m>0</y-m>
 			<z-m>0.16689</z-m>
 		</center>
@@ -195,13 +195,5 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-
-
-
-
-
-
-
-
+	
 </PropertyList>

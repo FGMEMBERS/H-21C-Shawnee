@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>lights.ac</path>
+	
+	<!-- No preview for fgrun-->
+	<animation>
+		<object-name>Cone-texture</object-name>
+		<object-name>Cone-crane</object-name>
+		<object-name>Cone</object-name>
+		<nopreview/>
+	</animation>
+	
+	<animation>
+	<type>select</type>
+		<object-name>Cone-texture</object-name>
+		<condition>
+			<property>sim/multiplay/generic/int[4]</property>
+		</condition>
+	</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Cone-crane</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[8]</property>
+    </condition>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/H-21C-Shawnee/Models/Lights/light-cone.eff</inherits-from>
+    <object-name>Cone</object-name>
+  </effect>
+
+  <animation>
+    <type>select</type>
+    <object-name>navlights.on</object-name>
+    <object-name>whiteTail.light</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[5]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>landingLight</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[4]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>landingLight.001</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[8]</property>
+    </condition>
+  </animation>
+
+  <animation>
+      <type>select</type>
+      <object-name>strobe.1</object-name>
+      <condition>
+        <property>sim/multiplay/generic/int[3]</property>
+      </condition>
+  </animation>
+
+  <animation>
+      <type>select</type>
+      <object-name>redlight.1</object-name>
+      <object-name>redlight.2</object-name>
+      <condition>
+        <property>sim/multiplay/generic/int[2]</property>
+      </condition>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>strobe.1</object-name>
+      <offset-m>3.4</offset-m>
+      <axis>
+          <x>-2.9</x>
+          <y>0.0</y>
+          <z>-1.472</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>billboard</type>
+      <object-name>strobe.1</object-name>
+  </animation>
+
+  <animation>
+      <type>dist-scale</type>
+      <object-name>strobe.1</object-name>
+      <interpolation>
+      <entry><ind>0</ind><dep>1</dep></entry>
+      <entry><ind>500</ind><dep>2.5</dep></entry>
+      <entry><ind>16000</ind><dep>10</dep></entry>
+      </interpolation>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>redlight.1</object-name>
+      <offset-m>4.7</offset-m>
+      <axis>
+          <x>-4.537</x>
+          <y>0.0</y>
+          <z>-1.298</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>billboard</type>
+      <object-name>redlight.1</object-name>
+  </animation>
+
+  <animation>
+      <type>dist-scale</type>
+      <object-name>redlight.1</object-name>
+      <interpolation>
+      <entry><ind>0</ind><dep>1</dep></entry>
+      <entry><ind>500</ind><dep>2.5</dep></entry>
+      <entry><ind>16000</ind><dep>10</dep></entry>
+      </interpolation>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>redlight.2</object-name>
+      <offset-m>3.2</offset-m>
+      <axis>
+          <x>2.972</x>
+          <y>0.0</y>
+          <z>1.243</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>billboard</type>
+      <object-name>redlight.2</object-name>
+  </animation>
+
+  <animation>
+      <type>dist-scale</type>
+      <object-name>redlight.2</object-name>
+      <interpolation>
+      <entry><ind>0</ind><dep>1</dep></entry>
+      <entry><ind>500</ind><dep>2.5</dep></entry>
+      <entry><ind>16000</ind><dep>10</dep></entry>
+      </interpolation>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>landingLight</object-name>
+      <offset-m>6.1</offset-m>
+      <axis>
+          <x>-6.153</x>
+          <y>0</y>
+          <z>-0.997</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>billboard</type>
+      <object-name>landingLight</object-name>
+  </animation>
+
+  <animation>
+      <type>dist-scale</type>
+      <object-name>landingLight</object-name>
+      <interpolation>
+      <entry><ind>0</ind><dep>1</dep></entry>
+      <entry><ind>500</ind><dep>2.5</dep></entry>
+      <entry><ind>16000</ind><dep>10</dep></entry>
+      </interpolation>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>landingLight.001</object-name>
+      <offset-m>5.96</offset-m>
+      <axis>
+          <x>-5.963</x>
+          <y>1.043</y>
+          <z>0.956</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>billboard</type>
+      <object-name>landingLight.001</object-name>
+  </animation>
+
+  <animation>
+      <type>dist-scale</type>
+      <object-name>landingLight.001</object-name>
+      <interpolation>
+      <entry><ind>0</ind><dep>1</dep></entry>
+      <entry><ind>500</ind><dep>2.5</dep></entry>
+      <entry><ind>16000</ind><dep>10</dep></entry>
+      </interpolation>
+  </animation>
+
+</PropertyList>
