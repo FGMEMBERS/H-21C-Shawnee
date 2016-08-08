@@ -1,0 +1,484 @@
+<PropertyList>
+
+	<path>h21c-cockpit.ac</path>
+	
+	<!-- No preview for fgrun-->
+	<animation>
+		<object-name>LightVolumeInner1</object-name>
+		<nopreview/>
+	</animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Cockpit-Doublage</object-name>
+    <object-name>Siege</object-name>
+    <object-name>smallBox</object-name>    
+    <object-name>block</object-name>
+    <object-name>block.001</object-name>
+    <object-name>box</object-name>
+    <object-name>box.001</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>cylinder.004</object-name>
+    <object-name>cylinder.005</object-name>
+    <object-name>cylinder.006</object-name>
+    <object-name>cylinder.007</object-name>
+    <object-name>cylinder.008</object-name>
+    <object-name>cylinder.009</object-name>
+    <object-name>object</object-name>
+    <object-name>object.001</object-name>
+    <object-name>object.002</object-name>
+    <object-name>object.007</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>Marine</value>
+      </equals>
+    </condition>
+    <texture>btextu99.rgb</texture>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Cockpit-Doublage</object-name>
+    <object-name>Siege</object-name>
+    <object-name>smallBox</object-name>    
+    <object-name>block</object-name>
+    <object-name>block.001</object-name>
+    <object-name>box</object-name>
+    <object-name>box.001</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>cylinder.004</object-name>
+    <object-name>cylinder.005</object-name>
+    <object-name>cylinder.006</object-name>
+    <object-name>cylinder.007</object-name>
+    <object-name>cylinder.008</object-name>
+    <object-name>cylinder.009</object-name>
+    <object-name>object</object-name>
+    <object-name>object.001</object-name>
+    <object-name>object.002</object-name>
+    <object-name>object.007</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>sim/model/livery/file</property>
+          <value>13DBLE</value>
+        </equals>
+        <equals>
+          <property>sim/model/livery/file</property>
+          <value>SAR</value>
+        </equals>
+      </or>
+    </condition>
+    <texture>miltextu99.rgb</texture>
+  </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>ElevatorTab</object-name>
+    <emission>
+        <red>0.01</red>
+        <green>0.01</green>
+        <blue>0.01</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Cockpit-Doublage</object-name>
+    <object-name>Siege</object-name>
+    <object-name>smallBox</object-name>    
+    <object-name>block</object-name>
+    <object-name>block.001</object-name>
+    <object-name>box</object-name>
+    <object-name>box.001</object-name>
+    <object-name>object.002</object-name>
+    <object-name>object.007</object-name>
+		<object-name>Manche-Pilote</object-name>
+		<object-name>Manche-Copilote</object-name>
+		<object-name>ParkingBrakeLeverL</object-name>
+		<object-name>ParkingBrakeSupportL</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+    <emission>
+      <red>1</red>
+      <green>0.5</green>
+      <blue>0.2</blue>
+      <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+    </emission>
+  </animation>
+  
+  <!-- Rembrand - internal Light -->
+	<animation>
+		<type>select</type>
+		<object-name>LightVolumeInner1</object-name>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>Manche-Copilote</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.13222</x-m>
+			<y-m>-0.485056</y-m>
+			<z-m>-0.240116</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>Manche-Copilote</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.13222</x-m>
+			<y-m>-0.485056</y-m>
+			<z-m>-0.240116</z-m>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>Manche-Pilote</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.13222</x-m>
+			<y-m>0.48415</y-m>
+			<z-m>-0.240116</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+   <animation>
+		<type>rotate</type>
+		<object-name>Manche-Pilote</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.13222</x-m>
+			<y-m>0.48415</y-m>
+			<z-m>-0.240116</z-m>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+   <animation>
+		<type>rotate</type>
+		<object-name>Collective-Copilote</object-name>
+		<property>sim/multiplay/generic/float[10]</property>
+		<factor>-15</factor>
+		<center>
+			<x-m>-6.62484</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.409993</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>Collective-Pilote</object-name>
+		<property>sim/multiplay/generic/float[10]</property>
+		<factor>-15</factor>
+		<center>
+			<x-m>-6.62484</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.409993</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>GRudder-Pilote</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.85856</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.542059</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>DRudder-Pilote</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>10</factor>
+		<center>
+			<x-m>-7.85856</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.542059</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>GRudder-Copilote</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>-10</factor>
+		<center>
+			<x-m>-7.85856</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.542059</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>rotate</type>
+		<object-name>DRudder-Copilote</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>10</factor>
+		<center>
+			<x-m>-7.85856</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.542059</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <model>
+    <name>Panel</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -7.387 </x-m>
+      <y-m>  0.017 </y-m>
+      <z-m>  0.330 </z-m>
+   </offsets>
+  </model>
+
+  <model>
+    <name>AP-Control-Lamps</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/lamps/lamp-ap.xml</path>
+    <offsets>
+      <x-m> -7.375 </x-m>
+      <y-m> -0.033 </y-m>
+      <z-m>  0.145 </z-m>
+      <pitch-deg>-5</pitch-deg>
+   </offsets>
+  </model>
+
+  <model>
+    <name>Radio-Frequency-Selection</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/radio/radio-select.xml</path>
+    <offsets>
+      <x-m> -7.315 </x-m>
+      <y-m> -0.030 </y-m>
+      <z-m>  0.065 </z-m>
+      <pitch-deg>-44.82</pitch-deg>
+   </offsets>
+  </model>
+
+  <!-- Master switches and Magneto Knob -->
+  <model>
+    <name>Master</name>
+    <path>Aircraft/H-21C-Shawnee/Models/Cockpit/Instruments/master/master.xml</path>
+    <offsets>
+      <x-m> -7.228 </x-m>
+      <y-m> -0.030 </y-m>
+      <z-m>  0.017 </z-m>
+      <pitch-deg>-66.4</pitch-deg>
+   </offsets>
+  </model>
+
+  <!--  trim-wheel control -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ElevatorTab</object-name>
+    <property>sim/multiplay/generic/float[9]</property>
+    <factor>-50</factor>
+    <center>
+      <x-m>-7.067</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.118</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ElevatorTab</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+       <binding>
+        <command>nasal</command>
+        <script>h21.applyTrimWheels(0, 0)</script>
+       </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/float[9]</property>
+        <step>0.01</step>
+        <min>-1</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/multiplay/generic/float[9]</property>
+        <step>-0.01</step>
+        <min>-1</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Parking Brake -->
+  <animation>
+    <type>translate</type>
+    <object-name>ParkingBrakeLeverL</object-name>
+    <property>/controls/gear/brake-parking</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep>-0.07</dep></entry>
+      <entry><ind>1.0</ind><dep>    0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ParkingBrakeLeverL</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/brake-parking</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch1</property>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  	<!-- inner light -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>InnerLight</name>
+		<object-name>LightVolumeInner1</object-name>
+		<position>
+			<x>-6.68</x>
+			<y> 0.0</y>
+			<z>0.62</z>
+		</position>
+		<direction>
+			<x>-0.3</x>
+			<y> 0.0</y>
+			<z>-0.7</z>
+		</direction>
+    <dim-factor>
+      <property>sim/multiplay/generic/float[11]</property>
+      <factor>1</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+    </dim-factor>
+		<direction>
+			<x>-0.3</x>
+			<y> 0.0</y>
+			<z>-0.7</z>
+		</direction>
+		<ambient>
+			<r>0.80</r>
+			<g>0.20</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.7</l>
+			<q>8</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>250</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+
+</PropertyList>

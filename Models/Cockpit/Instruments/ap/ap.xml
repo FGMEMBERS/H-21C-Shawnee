@@ -1,0 +1,268 @@
+<PropertyList>
+
+	<path>ap-box.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>Marine</value>
+      </equals>
+    </condition>
+    <texture>panel.png</texture>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>13DBLE</value>
+      </equals>
+    </condition>
+    <texture>milpanel.png</texture>
+  </animation>
+
+  <animation>
+      <type>material</type>
+      <object-name>face</object-name>
+      <object-name>switch</object-name>
+      <object-name>switch.001</object-name>
+      <object-name>switch.002</object-name>
+      <object-name>switch.003</object-name>
+      <object-name>switch.004</object-name>
+      <condition>
+        <greater-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0</value>
+        </greater-than>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      </condition>
+      <emission>
+        <red>1.25</red>
+        <green>0.6</green>
+        <blue>0.3</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+  </animation>
+
+  <animation>
+      <type>material</type>
+      <object-name>face</object-name>
+      <object-name>switch</object-name>
+      <object-name>switch.001</object-name>
+      <object-name>switch.002</object-name>
+      <object-name>switch.003</object-name>
+      <object-name>switch.004</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1</value>
+        </less-than>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      </condition>
+      <emission>
+        <red>0.007</red>
+        <green>0.007</green>
+        <blue>0.007</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch</object-name>
+    <property>/autopilot/switches/ap</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 35</dep></entry>
+      <entry><ind>1</ind><dep>-35</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001</x-m>
+      <y-m>-0.070</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch.001</object-name>
+    <property>/autopilot/switches/hdg</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 35</dep></entry>
+      <entry><ind>1</ind><dep>-35</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001</x-m>
+      <y-m>-0.035</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch.002</object-name>
+    <property>/autopilot/switches/alt</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 35</dep></entry>
+      <entry><ind>1</ind><dep>-35</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch.003</object-name>
+    <property>/autopilot/switches/nav</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 35</dep></entry>
+      <entry><ind>1</ind><dep>-35</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001</x-m>
+      <y-m> 0.035</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch.004</object-name>
+    <property>/autopilot/switches/dme</property>
+    <interpolation>
+      <entry><ind>0</ind><dep> 35</dep></entry>
+      <entry><ind>1</ind><dep>-35</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001</x-m>
+      <y-m> 0.070</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Animation -->
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch</object-name>
+      <visible>true</visible>
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-toggle</command>
+              <property>/autopilot/switches/ap</property>
+          </binding>            
+          <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch</property>
+          </binding>
+      </action>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.001</object-name>
+      <visible>true</visible>
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-toggle</command>
+              <property>/autopilot/switches/hdg</property>
+          </binding>            
+          <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch</property>
+          </binding>
+      </action>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.002</object-name>
+      <visible>true</visible>
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-toggle</command>
+              <property>/autopilot/switches/alt</property>
+          </binding>            
+          <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch</property>
+          </binding>
+      </action>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.003</object-name>
+      <visible>true</visible>
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-toggle</command>
+              <property>/autopilot/switches/nav</property>
+          </binding>            
+          <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch</property>
+          </binding>
+      </action>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.004</object-name>
+      <visible>true</visible>
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-toggle</command>
+              <property>/autopilot/switches/dme</property>
+          </binding>            
+          <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch</property>
+          </binding>
+      </action>
+  </animation>
+
+</PropertyList>

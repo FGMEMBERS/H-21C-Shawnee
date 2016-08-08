@@ -1,0 +1,1372 @@
+<?xml version="1.0"?>
+<!-- 
+Work together with the nav-dev.xml instrument
+-->
+
+<PropertyList>
+
+<path>radio-select.ac</path>
+
+<animation>
+    <type>material</type>    
+    <object-name>decDot</object-name>
+    <object-name>crsnum1</object-name>
+    <object-name>crsnum10</object-name>
+    <object-name>crsnum100</object-name>
+    <object-name>comm01</object-name>
+    <object-name>comm001</object-name>
+    <object-name>comm1</object-name>
+    <object-name>comm10</object-name>
+    <object-name>comm100</object-name>
+    <object-name>nav01</object-name>
+    <object-name>nav001</object-name>
+    <object-name>nav1</object-name>
+    <object-name>nav10</object-name>
+    <object-name>nav100</object-name>
+    <object-name>adf1</object-name>
+    <object-name>adf10</object-name>
+    <object-name>adf100</object-name>
+    <object-name>adf1000</object-name>
+    <object-name>tacan1</object-name>
+    <object-name>tacan10</object-name>
+    <object-name>tacan100</object-name>
+    <object-name>tacanX</object-name>
+    <object-name>tacanY</object-name>
+      <condition>
+        <greater-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0</value>
+        </greater-than>
+      </condition>
+      <emission>
+          <red>2.5</red>
+          <green>1.2</green>
+          <blue>0.6</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+</animation>
+
+
+<animation>
+    <type>material</type>    
+    <object-name>decDot</object-name>
+    <object-name>crsnum1</object-name>
+    <object-name>crsnum10</object-name>
+    <object-name>crsnum100</object-name>
+    <object-name>comm01</object-name>
+    <object-name>comm001</object-name>
+    <object-name>comm1</object-name>
+    <object-name>comm10</object-name>
+    <object-name>comm100</object-name>
+    <object-name>nav01</object-name>
+    <object-name>nav001</object-name>
+    <object-name>nav1</object-name>
+    <object-name>nav10</object-name>
+    <object-name>nav100</object-name>
+    <object-name>adf1</object-name>
+    <object-name>adf10</object-name>
+    <object-name>adf100</object-name>
+    <object-name>adf1000</object-name>
+    <object-name>tacan1</object-name>
+    <object-name>tacan10</object-name>
+    <object-name>tacan100</object-name>
+    <object-name>tacanX</object-name>
+    <object-name>tacanY</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1</value>
+        </less-than>
+      </condition>
+    <emission>
+      <red>0.028</red>
+      <green>0.014</green>
+      <blue>0.007</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+</animation>
+
+
+<animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>crsKnob</object-name>
+    <object-name>freqKnob</object-name>
+    <object-name>freqKnobDec</object-name>
+    <object-name>selKnob</object-name>
+      <condition>
+        <greater-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0</value>
+        </greater-than>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      </condition>
+      <emission>      
+        <red>1.25</red>
+        <green>0.6</green>
+        <blue>0.3</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+</animation>
+
+<animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>crsKnob</object-name>
+    <object-name>freqKnob</object-name>
+    <object-name>freqKnobDec</object-name>
+    <object-name>selKnob</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1</value>
+        </less-than>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      </condition>
+      <emission>
+        <red>0.01</red>
+        <green>0.01</green>
+        <blue>0.01</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      </emission>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>adf1</object-name>
+    <object-name>adf10</object-name>
+    <object-name>adf100</object-name>
+    <object-name>adf1000</object-name>
+    <condition>
+      <equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>comm01</object-name>
+    <object-name>comm001</object-name>
+    <object-name>comm1</object-name>
+    <object-name>comm10</object-name>
+    <object-name>comm100</object-name>
+    <condition>
+      <equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>1</value>
+      </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>nav01</object-name>
+    <object-name>nav001</object-name>
+    <object-name>nav1</object-name>
+    <object-name>nav10</object-name>
+    <object-name>nav100</object-name>
+    <condition>
+      <equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>2</value>
+      </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>tacan1</object-name>
+    <object-name>tacan10</object-name>
+    <object-name>tacan100</object-name>
+    <object-name>tacanX</object-name>
+    <object-name>tacanY</object-name>
+    <condition>
+      <equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>3</value>
+      </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>tacanX</object-name>
+    <condition>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>0</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>1</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>2</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+        <value type="string">Y</value>
+      </not-equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>tacanY</object-name>
+    <condition>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>0</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>1</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>2</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+        <value type="string">X</value>
+      </not-equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>decDot</object-name>
+    <condition>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>0</value>
+      </not-equals>
+      <not-equals>
+        <property>/instrumentation/radio-select/switch</property>
+        <value>3</value>
+      </not-equals>
+    </condition>
+</animation>
+
+<!-- ######################################### Left Panel -> Nav-Radial ############################ -->
+    <animation>
+        <type>textranslate</type>
+        <object-name>crsnum100</object-name>
+        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <factor>0.001</factor>
+        <step>100</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>crsnum10</object-name>
+        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <factor>0.01</factor>
+        <step>10</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>crsnum1</object-name>
+        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <factor>0.1</factor>
+        <step>1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crsKnob</object-name>
+        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <factor>-1</factor>
+		    <bias>0.005</bias>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m> 0.0</x-m>
+            <y-m>-0.036</y-m>
+            <z-m> 0.010</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>crsPlane</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>10</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>20</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-10</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-20</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>3</button>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>5</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>4</button>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-5</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+    </animation>
+
+
+<!-- ######################################### Right Panel -> Frequency-Selector ############################ -->
+
+
+<!-- COMM -->
+    <animation>
+        <type>textranslate</type>
+        <object-name>comm100</object-name>
+        <property>/instrumentation/comm/frequencies/selected-mhz</property>
+        <factor>0.001</factor>
+        <step>100</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>comm10</object-name>
+        <property>/instrumentation/comm/frequencies/selected-mhz</property>
+        <factor>0.01</factor>
+        <step>10</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>comm1</object-name>
+        <property>/instrumentation/comm/frequencies/selected-mhz</property>
+        <factor>0.1</factor>
+        <step>1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>comm01</object-name>
+        <property>/instrumentation/comm/frequencies/selected-mhz</property>
+        <factor>1.0</factor>
+        <step>0.1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>comm001</object-name>
+        <property>/instrumentation/comm/frequencies/selected-mhz</property>
+        <factor>10.0</factor>
+        <step>0.01</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!-- NAV -->
+    <animation>
+        <type>textranslate</type>
+        <object-name>nav100</object-name>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <factor>0.001</factor>
+        <step>100</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>nav10</object-name>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <factor>0.01</factor>
+        <step>10</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>nav1</object-name>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <factor>0.1</factor>
+        <step>1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>nav01</object-name>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <factor>1.0</factor>
+        <step>0.1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>nav001</object-name>
+        <property>/instrumentation/nav/frequencies/selected-mhz</property>
+        <factor>10.0</factor>
+        <step>0.01</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!-- ADF -->
+    <animation>
+      <type>textranslate</type>
+      <object-name>adf1000</object-name>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <factor>0.0001</factor>
+      <step>1000</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+    <animation>
+      <type>textranslate</type>
+      <object-name>adf100</object-name>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <factor>0.001</factor>
+      <step>100</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+    <animation>
+      <type>textranslate</type>
+      <object-name>adf10</object-name>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <factor>0.01</factor>
+      <step>10</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+    <animation>
+      <type>textranslate</type>
+      <object-name>adf1</object-name>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <factor>0.1</factor>
+      <step>1</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+
+<!-- TACAN -->
+    <animation>
+      <type>textranslate</type>
+      <object-name>tacan100</object-name>
+      <property>/instrumentation/tacan/frequencies/selected-channel</property>
+      <factor>0.001</factor>
+      <step>100</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+    <animation>
+      <type>textranslate</type>
+      <object-name>tacan10</object-name>
+      <property>/instrumentation/tacan/frequencies/selected-channel</property>
+      <factor>0.01</factor>
+      <step>10</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+    <animation>
+      <type>textranslate</type>
+      <object-name>tacan1</object-name>
+      <property>/instrumentation/tacan/frequencies/selected-channel</property>
+      <factor>0.1</factor>
+      <step>1</step>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+
+<!--  SELECT - KNOB -->
+   <animation>
+        <type>rotate</type>
+        <object-name>selKnob</object-name>
+        <property>/instrumentation/radio-select/switch</property>
+        <interpolation>
+          <entry><ind>0</ind><dep>45</dep></entry>
+          <entry><ind>1</ind><dep>0</dep></entry>
+          <entry><ind>2</ind><dep>-45</dep></entry>
+          <entry><ind>3</ind><dep>-180</dep></entry>
+        </interpolation>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m> 0.0</x-m>
+            <y-m> 0.022</y-m>
+            <z-m> 0.01</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>selPlane</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/radio-select/switch</property>
+              <step>1</step>
+              <min>0</min>
+              <max>4</max>
+              <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>1</button>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/radio-select/switch</property>
+              <step>-1</step>
+              <min>0</min>
+              <max>4</max>
+              <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>3</button>
+            <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/radio-select/switch</property>
+              <step>-1</step>
+              <min>0</min>
+              <max>4</max>
+              <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+        <action>
+            <button>4</button>
+            <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/radio-select/switch</property>
+              <step>1</step>
+              <min>0</min>
+              <max>4</max>
+              <wrap>1</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+    </animation>
+
+<!-- ##################################  GREAT FREQUENCY KNOB ################################### -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>freqKnob</object-name>
+        <visible>true</visible>
+
+<!-- LEFT MOUSE AND SCROLL WHEEL UP-->
+        <action>
+            <button>0</button>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.5</interval-sec>
+
+        <!-- if ADF is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>10</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>100</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <!-- if Comm is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>1.000</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>10.000</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if NAV is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>1.00</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>5.00</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if TACAN is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel</property>
+                <step>1</step>
+                <min>0</min>
+                <max>126</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel</property>
+                <step>10</step>
+                <min>0</min>
+                <max>126</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+<!-- SCROLL WHEEL CLICK AND SCROLL WHEEL SCROLL DOWN -->
+        <action>
+            <button>1</button>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.5</interval-sec>
+
+        <!-- if ADF is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>-10</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>-100</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <!-- if Comm is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>-1.000</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>-10.000</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if NAV is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>-1.00</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>-5.00</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if TACAN is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>126</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel</property>
+                <step>-10</step>
+                <min>0</min>
+                <max>126</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+    </animation>
+
+<!-- ########################################### SMALL FREQUENCY KNOB ##################################-->
+
+ 
+  <animation>
+        <type>pick</type>
+        <object-name>freqKnobDec</object-name>
+        <visible>true</visible>
+
+        <!-- LEFT MOUSE CLICK AND SCROLL WHEEL SCROLL UP-->
+        <action>
+            <button>0</button>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.5</interval-sec>
+
+            <!-- if ADF is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>1</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>10</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <!-- if Comm is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>0.01</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>0.1</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if NAV is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>0.01</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>0.1</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if TACAN is selected -->
+            <binding>
+                <condition>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+                <value>Y</value>
+            </binding>
+
+
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+
+        <!-- SCROLL WHEEL CLICK AND SCROLL WHEEL SCROLL DOWN-->
+        <action>
+            <button>1</button>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.5</interval-sec>
+
+            <!-- if ADF is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>-1</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+                <step>-10</step>
+                <min>200</min>
+                <max>1800</max>
+                <resolution>1</resolution>
+                <wrap>true</wrap>
+            </binding>
+
+            <!-- if Comm is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>-0.01</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/comm/frequencies/selected-mhz</property>
+                <step>-0.1</step>
+                <min>118.000</min>
+                <max>136.000</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if NAV is selected -->
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>-0.01</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>2</value>
+                    </equals>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+                <step>-0.1</step>
+                <min>108.00</min>
+                <max>118.00</max>
+                <wrap>true</wrap>
+            </binding>
+
+        <!-- if TACAN is selected -->
+            <binding>
+                <condition>
+                    <equals>
+                      <property>/instrumentation/radio-select/switch</property>
+                      <value>3</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/instrumentation/tacan/frequencies/selected-channel[4]</property>
+                <value>X</value>
+            </binding>
+
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch2</property>
+            </binding>
+        </action>
+
+  </animation>
+
+
+
+
+</PropertyList>

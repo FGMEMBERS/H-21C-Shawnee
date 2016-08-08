@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<!-- 
+Work together with the nav-freq.xml panel
+-->
+
+<PropertyList>
+
+<path>nav-dev.ac</path>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>shadow</object-name>
+	</effect>
+
+  <animation>
+      <type>material</type>
+        <object-name>NavDev.face</object-name>
+        <object-name>NavDev.compass</object-name>
+        <object-name>NavDev.crs</object-name>
+        <object-name>NavDev.pwr-off</object-name>
+        <object-name>NavDev.nav-off</object-name>
+        <object-name>NavDev.to-flag</object-name>
+        <object-name>NavDev.from-flag</object-name>
+      <condition>
+        <and>
+          <not>
+            <property>/controls/electric/master-switch</property>
+          </not>
+          <greater-than>
+            <property>sim/multiplay/generic/float[11]</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+      </condition>
+      <emission>
+        <red>0.32</red>
+        <green>0.15</green>
+        <blue>0.075</blue>
+        <factor-prop>sim/multiplay/generic/float[11]</factor-prop>
+      </emission>
+  </animation>
+
+  <animation>
+      <type>material</type>
+        <object-name>NavDev.face</object-name>
+        <object-name>NavDev.compass</object-name>
+        <object-name>NavDev.crs</object-name>
+        <object-name>NavDev.pwr-off</object-name>
+        <object-name>NavDev.nav-off</object-name>
+        <object-name>NavDev.to-flag</object-name>
+        <object-name>NavDev.from-flag</object-name>
+      <condition>
+        <less-than>
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>1.01</value>
+        </less-than>
+      </condition>
+      <emission>
+	      <red>0.028</red>
+	      <green>0.014</green>
+	      <blue>0.007</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      </emission>
+  </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>dmeOn</object-name>
+      <emission>
+        <red>   2 </red>
+        <green> 2 </green>
+        <blue>  0 </blue>
+      </emission>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>dmeOn</object-name>
+        <condition>
+          <or>
+            <property>/instrumentation/nav[0]/gs-in-range</property>
+            <and>
+              <property>/instrumentation/dme[0]/in-range</property>
+              <less-than>
+                  <property>/instrumentation/dme[0]/indicated-distance-nm</property>
+                  <value>2.0</value>
+              </less-than>
+              <greater-than>
+                  <property>/instrumentation/dme[0]/indicated-distance-nm</property>
+                  <value>-0.02</value>
+              </greater-than>
+            </and>
+          </or>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>NavDev.pwr-off</object-name>
+        <condition>
+          <less-than>
+              <property>/systems/electrical/volts</property>
+              <value>9</value>
+          </less-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>NavDev.nav-off</object-name>
+        <condition>
+            <not>
+                <property>/instrumentation/nav[0]/data-is-valid</property>
+            </not>
+        </condition>
+        <property>/orientation/heading-magnetic-deg</property>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>NavDev.to-flag</object-name>
+        <condition>
+            <property>/instrumentation/nav[0]/to-flag</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>NavDev.from-flag</object-name>
+        <condition>
+            <property>/instrumentation/nav[0]/from-flag</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>NavDev.compass</object-name>
+        <object-name>NavDev.crs</object-name>
+        <object-name>NavDev.to-flag</object-name>
+        <object-name>NavDev.from-flag</object-name>
+        <object-name>NavDev.nav-off</object-name>
+        <property>/orientation/heading-magnetic-deg</property>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>NavDev.compass</object-name>
+        <object-name>NavDev.crs</object-name>
+        <object-name>NavDev.to-flag</object-name>
+        <object-name>NavDev.from-flag</object-name>
+        <object-name>NavDev.nav-off</object-name>
+        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>NavDev.crs</object-name>
+        <property>/instrumentation/nav[0]/heading-needle-deflection</property>
+        <interpolation>
+        <entry><ind>-10.0</ind><dep>-0.0152</dep></entry>
+        <entry><ind>10.0</ind><dep>0.0152</dep></entry>
+    </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+    </animation>
+
+<!-- Hotspots -->
+    <animation>
+        <type>pick</type>
+        <object-name>Ring</object-name>
+        <object-name>NavDev.back</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-10</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-20</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Ring</object-name>
+        <object-name>NavDev.back</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>5</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Ring</object-name>
+        <object-name>NavDev.back</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>/instrumentation/nav[0]/radials/selected-deg</property>
+                <step>-5</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>1</wrap>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

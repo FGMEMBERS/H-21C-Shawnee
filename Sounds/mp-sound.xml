@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<fx>
+		<engine>
+			<name>engine</name>
+			<mode>looped</mode>
+			<path>/Sounds/helicopter.wav</path>
+			<condition>
+				<and>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>0.2</value>
+					</greater-than>
+					<not>
+						<property>/sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.4</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.01</factor>
+				<max>4.5</max>
+			</pitch>
+		</engine>
+
+    <door>
+      <name>right door</name>
+      <mode>in-transit</mode>
+      <path>/Aircraft/H-21C-Shawnee/Sounds/brakeAndDoor.wav</path>
+      <property>/sim/multiplay/generic/float[3]</property>
+      <volume>
+        <max>0.6</max>
+      </volume>
+    </door>
+
+    <door>
+      <name>left door</name>
+      <mode>in-transit</mode>
+      <path>/Aircraft/H-21C-Shawnee/Sounds/brakeAndDoor.wav</path>
+      <property>/sim/multiplay/generic/float[4]</property>
+      <volume>
+        <max>1</max>
+      </volume>
+    </door>
+
+	</fx>
+</PropertyList>
