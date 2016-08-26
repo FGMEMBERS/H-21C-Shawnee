@@ -208,6 +208,10 @@
 			<name>w|a|s|d</name>
 			<desc>Walkview</desc>
 		</key>
+		<key>
+			<name>F8</name>
+			<desc>Show laptimes</desc>
+		</key>
 		<text>
         -START and STOP ROUTINE Procedures-
         
@@ -438,6 +442,7 @@
 			<file>Aircraft/H-21C-Shawnee/Nasal/mk-ci-tacan.nas</file>
 			<file>Aircraft/H-21C-Shawnee/Nasal/mk-ap-helper.nas</file>
 			<file>Aircraft/H-21C-Shawnee/Nasal/doors.nas</file>
+			<file>Aircraft/H-21C-Shawnee/Nasal/laptimes.nas</file>
 		</h21>
 		<tyresmoke>
 			<file>Aircraft/H-21C-Shawnee/Nasal/tyresmoke.nas</file>

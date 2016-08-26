@@ -288,11 +288,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					var s2 = getprop("/race-observer/show-mp-times") or 0;
+					var s2 = getprop("show-mp-times") or 0;
 					if(s2){
-						setprop("/race-observer/show-mp-times", 0);
+						setprop("/show-mp-times", 0);
 					}else{
-						setprop("/race-observer/show-mp-times", 1);
+						setprop("/show-mp-times", 1);
 					}
 				</script>
 			</binding>
